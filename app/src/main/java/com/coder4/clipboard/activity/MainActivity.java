@@ -5,7 +5,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.coder4.clipboard.R;
-import com.coder4.clipboard.fragment.TestFragment;
+import com.coder4.clipboard.fragment.MsgListFragment;
 
 public class MainActivity extends BaseActivity implements View.OnClickListener {
 
@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         switch(v.getId()){
             case R.id.button:
-                launch(TestFragment.class);
+                launch(MsgListFragment.class);
                 break;
             default:
                 break;
