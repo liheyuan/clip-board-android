@@ -14,24 +14,22 @@ import com.coder4.clipboard.store.MsgStore;
  * Created by lihy on 15/10/13.
  */
 public class MsgListAdapter extends BaseAdapter {
-
-    MsgStore store = null;
     LayoutInflater inflater = null;
 
     public MsgListAdapter(LayoutInflater inflater){
         super();
         this.inflater = inflater;
-        store = MsgStore.getStore();
+        MsgStore.getStore().AddAdapter(this);
     }
 
     @Override
     public int getCount() {
-        return store.Size();
+        return MsgStore.getStore().Size();
     }
 
     @Override
     public Msg getItem(int position) {
-        return store.Get(position);
+        return MsgStore.getStore().Get(position);
     }
 
     @Override

@@ -54,8 +54,7 @@ public class MsgListFragment extends BaseFragment {
         msg.setTimestamp(System.currentTimeMillis());
         // add to store
         MsgStore.getStore().Add(msg);
-        // notify update
-        adapter.notifyDataSetChanged();
+        // Clean all
         editText.setText("");
     }
 }
